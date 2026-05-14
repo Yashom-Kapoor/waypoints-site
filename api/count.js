@@ -3,8 +3,6 @@ import { Redis } from "@upstash/redis";
 const redis = Redis.fromEnv();
 
 export default async function handler(req, res) {
-    const installs = await redis.get("installs");
-
     try {
         const installs = await redis.get("installs");
 
