@@ -1,3 +1,22 @@
-<h1>Welcome to Waypoints!</h1>
-<h3>A lightweight CLI for fast directory navigation.</h3>
-Install: curl -sSL waypoints-cli.vercel.app/install | bash
+<script>
+    async function loadCount() {
+        const res = await fetch ("/api/count");
+        const data = await res.json();
+
+        document.getElementById("count").innerText = 
+            `${data.installs} installs`;
+    }
+
+    loadCount();
+</script>
+
+<head>
+    <title>Waypoints</title>
+</head>
+<body>
+    <h1>Welcome to Waypoints!</h1>
+    <h3>A lightweight CLI for fast directory navigation.</h3>
+    Install: curl -sSL waypoints-cli.vercel.app/install | bash
+
+    <div id="count">Loading installs...</div>
+</body>

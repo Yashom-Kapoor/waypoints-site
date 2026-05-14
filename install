@@ -1,4 +1,0 @@
-#!/bin/bash
-set -e
-
-curl -sSL https://raw.githubusercontent.com/Yashom-Kapoor/Waypoints-CLI/main/install.sh | bash
